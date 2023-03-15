@@ -1,0 +1,26 @@
+-- Create a store database
+
+CREATE TABLE store_database (id INTEGER PRIMARY KEY, item TEXT, for TEXT, use TEXT, price INTEGER);
+
+INSERT INTO store_database VALUES (1, "Oatmeal", "High cholesterol", "Twice daily", 5);
+INSERT INTO store_database VALUES (2, "Olive Oil", "High cholesterol", "One teaspoon daily", 15);
+INSERT INTO store_database VALUES (3, "Mushroom Powder", "Antioxidant", "Daily", 20);
+INSERT INTO store_database VALUES (4, "Amla Powder", "High cholesterol", "One-fourth teaspoon daily", 23);
+INSERT INTO store_database VALUES (5, "NAC", "Antioxidant", "One capsule daily", 20);
+INSERT INTO store_database VALUES (6, "Face Yoga", "Toning and Relaxation", "Daily", 38);
+INSERT INTO store_database VALUES (7, "Cruciferous vegetables", "High Cholesterol", "Daily", 20);
+INSERT INTO store_database VALUES (8, "Athletic Greens", "Overall Health", "Every morning", 80);
+INSERT INTO store_database VALUES (9, "B Complex", "Overall Health", "Daily", 20);
+INSERT INTO store_database VALUES (10, "Milk Thistle", "Liver Health", "Daily", 18);
+INSERT INTO store_database VALUES (11, "Fish", "Heart Health and Protein", "Three times weekly", 35);
+INSERT INTO store_database VALUES (12, "Whole Grains", "HIgh Cholesterol", "Daily", 8);
+INSERT INTO store_database VALUES (13, "Leafy Greens and Legumes", "Overall Health and High Cholesterol", "Daily", 30);
+INSERT INTO store_database VALUES (14, "Soy", "High Cholesterol", "Daily", 10);
+INSERT INTO store_database VALUES (15, "Fruits", "High Cholesterol", "Daily", 30);
+
+--Display the database ordered by price.
+SELECT * FROM store_database
+ORDER BY price;
+
+--Display the total price of all items listed.
+SELECT SUM(price) FROM store_database;
